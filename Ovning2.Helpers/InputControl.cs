@@ -12,8 +12,26 @@ public class InputControl
             if (!string.IsNullOrWhiteSpace(retur))
                 return retur;
 
+            Console.WriteLine("Felaktig input...");
+            Console.WriteLine();
+
         } while (true);
+    }
+    public static uint AskForUInt(string prompt)
+    {
+        do
+        {
+            //string s = AskForString(prompt);
+            if (uint.TryParse(AskForString(prompt) , out uint retur))
+                return retur;
+
+            Console.WriteLine("Felaktig input...");
+            Console.WriteLine();
+
+        } while (true);
+
         
+
 
     }
 }

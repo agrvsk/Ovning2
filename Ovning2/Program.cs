@@ -12,13 +12,9 @@ internal class Program
 
     public void start()
     {
-        Menu.ShowMenu();
-        Menu.startLoop();
-        //bool success = false;
-        //do
-        //{
-
-        //} while (!success );
+        Menu menu = new();
+        menu.ShowMenu();
+        menu.startLoop();
 
     }
 }
